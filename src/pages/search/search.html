@@ -1,0 +1,65 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>SEARCH OFFICERS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="main_wrapper">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-10 offset-1>
+          <ion-list>
+
+              <ion-item *ngIf="id != 2" class="search_box">
+                <ion-label fixed>{{placeholer}}</ion-label>
+                <ion-input [(ngModel)]="search_value" type="text" ></ion-input>
+              </ion-item>
+
+              <ion-item class="search_box" *ngIf="id == 2">
+                  <ion-label>{{placeholer}}</ion-label>
+                  <ion-select #r [(ngModel)]="grade" (ionChange)="getGrade(r.value)">
+                    <ion-option >CRB</ion-option>
+                    <ion-option >MT</ion-option>
+                    <ion-option >GM</ion-option>
+                    <ion-option >AM</ion-option>
+                    <ion-option >HAG</ion-option>
+                    <ion-option >SAG</ion-option>
+                    <ion-option >JAG</ion-option>
+                    <ion-option >SG</ion-option>
+                    <ion-option >SS</ion-option>
+                    <ion-option >JS</ion-option>
+                  </ion-select>
+                </ion-item>
+          
+            
+            </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col col-10 offset-1 *ngIf="id != 2">
+        <button ion-button color="light" outline block (click)="searchQuery()">
+          Search 
+        </button>
+      </ion-col>
+      <ion-col col-3>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+<p><br></p>
+        <ion-list inset *ngIf="officers">
+            <button class="list_item" outline  ion-item *ngFor="let Officer of officers; let i = index;" (click)="itemSelected(Officer)">
+              {{i + 1}}&nbsp;&nbsp;<span class="officer_name">{{ Officer.name }}</span>            </button>  
+        </ion-list>
+
+        <!-- <ion-list inset>
+          <button ion-item>
+            Ayush
+          </button> 
+        </ion-list> -->
+</ion-content>

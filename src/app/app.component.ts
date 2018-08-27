@@ -4,28 +4,40 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+// import { ListPage } from '../pages/list/list';
+// import { DropdownProvider } from '../providers/dropdown/dropdown';
+import { SearchPage } from '../pages/search/search';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-
+  options = 0;
+  url1 :string = '';
+  url2 : string = '';
+  url3 :string = '';
+  
   rootPage: any = HomePage;
-
-  pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
-    // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
-    ];
+    // used for an example of ngFor and navigation 
+    this.splashScreen.show();
+  }
+  getCurrentData(value){
+    if(value != '' ){
+      this.nav.push(SearchPage, {
+        value : value
+      });
+    }else{
+
+    }
+    
 
   }
+
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -41,4 +53,11 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
+
+  gotoUrl(url){
+    // console.log(url);
+    window.open(url,'_self');
+  }
+
+   
 }

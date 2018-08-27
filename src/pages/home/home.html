@@ -3,16 +3,60 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>IRTS APP</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content class="main_wrapper">
+    
+      <ion-card class="card_box">
+        <ion-card-content>
+           <ion-slides class="slider" pager autoplay="3000">
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+                <ion-slide *ngFor="let i of [1,2,3,4,5]">
+                  <img src="assets/imgs/img{{i}}.jpg"/>
+                </ion-slide>
+              
+                <!-- <ion-slide>
+                    <img src="assets/imgs/img2.jpg"/>
+                </ion-slide>
+              
+                <ion-slide>
+                    <img src="assets/imgs/img3.jpg"/>
+                </ion-slide> -->
+              
+              </ion-slides> 
+        </ion-card-content>
+      </ion-card>
+      <br>
+      <!-- <hr style="border: 1px solid #fff">
+      <br> -->
+      <ion-grid>
+        <ion-row>
+               <ion-col col-12>
+                <h1 style="text-align : center;color : #fff;font-variant: small-caps; font-family: Arial, Helvetica, sans-serif"> Login Here</h1>
+                <ion-list>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+                <ion-item class="input_box">
+                  <ion-label fixed>Username</ion-label>
+                  <ion-input type="text" [(ngModel)]="username" name="username"></ion-input>
+                </ion-item>
+              <br>
+                <ion-item  class="input_box">
+                  <ion-label fixed>Password</ion-label>
+                  <ion-input type="password"  [(ngModel)]="password" name="password"></ion-input>
+                </ion-item>
+              
+                <br>
+                <br>
+                <!-- <button ion-button  color = "light" > LOGIN HERE</button> -->
+                <button ion-button block color="light" outline (click)="loginUser()">Login Here</button>
+                <br>
+                <div style="color : #fff; text-align: center; font-weight: bold;">OR</div>
+                <br>
+                <button ion-button block color="light" outline (click)="signupUser()">SIGN UP HERE</button>
+              </ion-list>
+              </ion-col>
+        </ion-row>
+      </ion-grid>
 </ion-content>

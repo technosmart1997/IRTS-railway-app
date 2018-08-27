@@ -1,16 +1,40 @@
-// http://ionicframework.com/docs/theming/
+// a {
+//     // .wrapper{
+//     //     background-image: linear-gradient(to bottom, #350537, #55045e, #750389, #9406b8, #b212eb);
+//     // }
+// }
+
+.irts_icon img{
+   padding : 20px 50px;
+   opacity: 0.5;
+}
 
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+.toolbar-background{
+    background-color: #0c3665;
+}
+
+.title .title-md{
+    color : #fff;
+}
+
+.toolbar-title{
+    color : #fff;
+}
+
+.wrapper{
+    // background-color: #048cc1;
+    background-image: linear-gradient(to left top, #051037, #0c3665, #0b5f93, #048cc1, #12bceb);
+}
+
+.select_box{
+    margin : 2%;
+    width : 96%;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    // color : black;
+}
+
+.select_box ion-label{
+    color : #051037!important;
+}

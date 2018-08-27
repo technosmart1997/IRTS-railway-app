@@ -1,16 +1,63 @@
 <ion-menu [content]="content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Menu</ion-title>
+      <ion-title>IRTS Contents</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
+  <ion-content class="wrapper">
+    <ion-list> 
+        <ion-item class="select_box">  
+            <ion-label>About IRTS</ion-label>
+            <ion-select #u  (ionChange)="gotoUrl(u.value)" menuClose>
+              <ion-option value="http://www.irts.org.in/view_section1.jsp?lang=0&id=0,1,408">Present Role and Future Of IRTS.</ion-option>
+              <ion-option value="http://www.irts.org.in/view_section1.jsp?lang=0&id=0,1,409">IRTS Association</ion-option>
+              <ion-option value="http://www.indianrailways.gov.in/railwayboard/view_section.jsp?lang=0&id=0,1,304,366">Railway Board Directorates</ion-option>
+              <ion-option value="http://www.irts.org.in/view_section1.jsp?lang=0&id=0,1,422">B.M.S's Bisht's Page</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item class="select_box">
+            <ion-label>Professional Section</ion-label>
+            <ion-select #p (ionChange)="gotoUrl(p.value)" menuClose>
+              <ion-option value="http://www.irts.org.in/view_section1.jsp?lang=0&id=0,6,418">Presentation and Articles</ion-option>
+              <ion-option value="http://www.irts.org.in/view_section1.jsp?lang=0&id=0,6,421">National And International Scenarios</ion-option>
+              <ion-option value="http://www.indianrailways.gov.in/railwayboard/view_section.jsp?lang=0&id=0,5,373">Opportunities</ion-option>
+              <ion-option value="http://www.irts.org.in/view_section1.jsp?lang=0&id=0,6,420">Virtual Data Base</ion-option>
+              <ion-option value="http://www.irts.org.in/view_section1.jsp?lang=0&id=0,6,456">Initiatives Taken By IRTS officers</ion-option>
+            </ion-select>
+        </ion-item>
+       
+      <ion-item class="select_box">
+          <ion-label class="label">Personal Section</ion-label>
+          <ion-select #c [(ngModel)]="options" (ionChange)="getCurrentData(c.value)" menuClose>
+            <ion-option value="0">Batch Wise</ion-option>
+            <ion-option value="1">Zone Wise</ion-option>
+            <ion-option value="2">Grade Wise</ion-option>
+            <ion-option value="3">Post Wise</ion-option>
+          </ion-select>
+      </ion-item>
+
+      <ion-item class="select_box">
+          <ion-label>Contact Us</ion-label>
+          <ion-select #r  (ionChange)="gotoUrl(r.value)" menuClose>
+            <ion-option value="http://www.irts.org.in/view_section1.jsp?lang=0&id=0,7,278">Feedback</ion-option>
+            <ion-option value="http://www.irts.org.in/view_section1.jsp?lang=0&id=0,7,277">Site Map</ion-option>
+            <ion-option value="http://www.irts.org.in/view_section1.jsp?lang=0&id=0,7,333">Privacy Policy</ion-option>
+            <!-- <ion-option value="3">Post Wise</ion-option> -->
+          </ion-select>
+      </ion-item>
     </ion-list>
+<br>
+<br>
+<br>
+    <ion-grid>
+      <ion-row >  
+        <ion-col col-12 class="irts_icon">
+          <img src="assets/imgs/irts.png">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-content>
 
 </ion-menu>

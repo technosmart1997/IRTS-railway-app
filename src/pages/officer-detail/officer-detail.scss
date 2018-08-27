@@ -1,0 +1,21 @@
+page-officer-detail {
+    .main_wrapper{
+
+        background-image: linear-gradient(to right bottom, #051037, #0c3665, #0b5f93, #048cc1, #12bceb);
+        color : #fff!important;
+    }
+
+    .toolbar-title , .toolbar-title-md{
+        color : #fff;
+        font-weight: bold;
+        font-size : 22px;
+    }
+
+    .toolbar-background{
+        background-color: transparent; 
+    }
+
+    .back-button-icon{
+        color : #fff;
+    }
+}

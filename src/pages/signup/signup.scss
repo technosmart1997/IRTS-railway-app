@@ -1,0 +1,40 @@
+page-signup {
+    
+    .toolbar-background{
+        background-color: transparent; 
+    }
+
+    .icon {
+        color:  #fff;
+    }
+    .toolbar-title , .toolbar-title-md{
+        color : #fff;
+        font-weight: bold;
+        font-size : 22px;
+    }
+
+    .main_wrapper{
+        background-image: linear-gradient(to bottom, #051037, #0c3665, #0b5f93, #048cc1, #12bceb);
+        // background-image: linear-gradient(to bottom, #350537, #55045e, #750389, #9406b8, #b212eb);
+    }
+
+    .input_box ion-label{
+        color : #051037!important;
+    }
+    
+    
+    .input_box{
+        background-color: antiquewhite;
+        border-radius: 6px; 
+        margin-bottom : 16px;
+    }
+
+    .button-outline-md-light {
+        border-width: 2px;
+        border-radius: 7px;
+    }
+
+    .input {
+        padding : 2px 10px;
+    }
+}

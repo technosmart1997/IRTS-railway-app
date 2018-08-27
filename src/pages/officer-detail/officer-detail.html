@@ -1,0 +1,61 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ officer_name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="main_wrapper" padding>
+<ion-grid *ngIf="officer">
+  <ion-row>
+        <ion-col col-12>
+            <h2><strong>Designation : </strong>{{officer.designation}}</h2>
+            <h2><strong>Posted At :</strong>{{officer.posted_at}}</h2>
+            <!-- <h2><strong>Designation : </strong>{{officer.designation}}</h2>
+            <h2><strong>Designation : </strong>{{officer.designation}}</h2>
+            <h2><strong>Designation : </strong>{{officer.designation}}</h2> -->
+        </ion-col>
+  </ion-row>
+    <br>
+    <br>
+  <ion-row>
+
+    <ion-col col-4>
+      <h3>ZONE</h3>
+      <h4>{{officer.zone}}</h4>
+    </ion-col>
+    <ion-col col-4>
+        <h3>BATCH</h3>
+        <h4>{{officer.batch}}</h4>
+      </ion-col>
+      <ion-col col-4>
+          <h3>GRADE</h3>
+          <h4>{{officer.grade}}</h4>
+        </ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col col-6>
+        <h3>Date Of Birth</h3>
+        <h4>{{officer.dob}}</h4>
+      </ion-col>
+      <ion-col col-6>
+          <h3>DITS</h3>
+          <h4>{{officer.DITS}}</h4>
+        </ion-col>
+        <!-- <ion-col col-4>
+            <h3>GRADE</h3>
+            <h4>{{officer.grade}}</h4>
+          </ion-col> -->
+    </ion-row>
+    <br>
+    <br>
+    <ion-row>
+      <ion-col col-12>
+          <h2><strong>Recruitment Method : </strong>{{officer.recruitment_method}}</h2>
+      </ion-col>
+    </ion-row>
+</ion-grid>
+</ion-content>

@@ -1,0 +1,68 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>IRTS APP</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="main_wrapper" >
+    <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+            <h1 style="text-align : center;color : #fff;font-variant: small-caps; font-family: Arial, Helvetica, sans-serif">Signup Here</h1>
+          <br>
+            <ion-list>
+                <ion-item class="input_box">
+                    <ion-label fixed>Name</ion-label>
+                    <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
+                  </ion-item>
+
+                  <ion-item class="input_box">
+                    <ion-label fixed>Date Of Birth</ion-label>
+                    <ion-input type="date" [(ngModel)]="dob" name="dob"></ion-input>
+                  </ion-item>
+
+                <ion-item class="input_box">
+                  <ion-label fixed>Username</ion-label>
+                  <ion-input type="text" [(ngModel)]="username" name="username"></ion-input>
+                </ion-item>
+              
+                <ion-item class="input_box">
+                  <ion-label fixed>Password</ion-label>
+                  <ion-input type="password"  [(ngModel)]="password" name="password"></ion-input>
+                </ion-item>
+
+                <ion-item class="input_box">
+                  <ion-label fixed>Batch(Exam Year)</ion-label>
+                  <ion-input type="number"  [(ngModel)]="batch" name="batch"></ion-input>
+                </ion-item>
+
+              <ion-item class="input_box">
+                <ion-label fixed>Email</ion-label>
+                <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+              </ion-item>
+            
+              <ion-item class="input_box">
+                <ion-label fixed>Telephone No.</ion-label>
+                <ion-input type="tel"  [(ngModel)]="mobile" name="mobile"></ion-input>
+              </ion-item>
+              <br>
+            <br>
+
+                <button ion-button block outline color = "light" (click)="signUpUser()">
+                  SIGN UP HERE
+                </button>
+                <br>
+                <div style="color : #fff; text-align: center; font-weight: bold;">OR</div>
+                <br>
+                <button ion-button block outline color = "light" (click)="loginUser()">
+                    Already A Member? Login Here
+                  </button>
+              </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+</ion-content>
